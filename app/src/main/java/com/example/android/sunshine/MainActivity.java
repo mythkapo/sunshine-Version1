@@ -1,5 +1,6 @@
 package com.example.android.sunshine;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -42,7 +43,10 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Log.i("fragment", "setting clicked");
+            if (id == R.id.action_settings){
+                Intent intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
+            }
             return true;
         }
 
